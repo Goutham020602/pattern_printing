@@ -1,0 +1,36 @@
+import java.util.*;
+public class Main
+{
+public static void main(String[] args)
+{
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int star = 3, space = 1;
+    for(int i = 1; i <= n; i++)
+    {
+        for(int x = 1; x <= star; x++)
+        {
+            System.out.print("*\t");
+        }
+        for(int y = 1; y <= space; y++)
+        {
+            System.out.print("\t");
+        }
+        for(int z = 1; z <= star; z++)
+        {
+            System.out.print("*\t");
+        }
+        if(i <= n/2)
+        {
+        star--;
+        space+=2;
+        }
+        else
+        {
+            star++;
+            space-=2;
+        }
+        System.out.println();
+    }
+}
+}
